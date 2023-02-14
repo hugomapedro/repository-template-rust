@@ -1,0 +1,1 @@
+/Users/hugopedro/Projects/Sofair/repository-template/adder/target/debug/adder: /Users/hugopedro/Projects/Sofair/repository-template/adder/src/common.rs /Users/hugopedro/Projects/Sofair/repository-template/adder/src/main.rs
