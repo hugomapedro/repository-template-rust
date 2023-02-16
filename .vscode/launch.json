@@ -9,7 +9,7 @@
             "type": "lldb",
             "request": "launch",
             "name": "Debug",
-            "program": "${workspaceFolder}/main",
+            "program": "${workspaceFolder}/adder/src/main",
             "args": [],
             "cwd": "${workspaceFolder}"
         }
