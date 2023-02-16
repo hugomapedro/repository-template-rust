@@ -1,8 +1,8 @@
+extern crate libmath;
+
 use std::io;
 
-mod common;
-
-use crate::common::*;
+use crate::libmath::*;
 
 fn main() -> io::Result<()> {
     
@@ -27,7 +27,7 @@ fn main() -> io::Result<()> {
     let _num1: i32 = user_input1.parse().unwrap();
     let _num2: i32 = user_input2.parse().unwrap();
     
-    let sum = common::add(_num1, _num2);
+    let sum = add(_num1, _num2);
     
     println!("The result is {} ", sum);
 
