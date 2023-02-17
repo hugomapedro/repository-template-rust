@@ -1,5 +1,5 @@
 branches:
-  - main
+  - master
   - rust_main
   - next
 
