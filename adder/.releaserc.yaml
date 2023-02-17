@@ -1,7 +1,6 @@
 branches:
   - +([0-9])?(.{+([0-9]),x}).x
-  - main
-  - rust-main
+  - master
   - next
   - next-major
   - name: beta
