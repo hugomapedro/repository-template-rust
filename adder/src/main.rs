@@ -9,7 +9,7 @@ fn main() -> io::Result<()> {
     let mut user_input1 = String::new();
     let mut user_input2 = String::new();
 
-    println!("This code is very complex, adds 2 values");
+    println!("This code adds 2 values");
     
     println!("Insert value 1:");
 
