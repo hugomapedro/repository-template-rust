@@ -11,7 +11,7 @@ fn main() -> io::Result<()> {
 
     println!("This code adds 2 values");
     
-    println!("Insert value 11:");
+    println!("Insert value one:");
 
     let stdin = io::stdin(); // We get `Stdin` here.
     
