@@ -1,9 +1,6 @@
 branches:
   - master
-  - rust_main
   - next
-
-release: { "branches": [ "main" ] }
 
 plugins:
     - '@semantic-release/commit-analyzer'
