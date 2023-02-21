@@ -5,7 +5,7 @@
       "main",
       {
         "name": "beta",
-        "prerelease": true
+        "prerelease": false
       }
     ],
     "plugins": [
