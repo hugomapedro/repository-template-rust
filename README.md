@@ -7,8 +7,9 @@ Repo Brief Description (2 to 5 lines)
 # Table of Contents
 1. [Features](#features)
 2. [How to Contribute](#howtocontribure)
-3. [How to Use this](#howtouse)
+3. [How to Use](#howtouse)
 4. [Examples](#examples)
+5. [Test](#test)
 
 
 ## Features
