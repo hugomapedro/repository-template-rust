@@ -2,8 +2,8 @@ name: Release
 on:
   push:
     branches:
-      - main
-      - alpha
+      - master
+      - next
 
 env:
   RUST_BACKTRACE: 1
@@ -15,6 +15,7 @@ jobs:
         if: github.actor != 'sbosnick-bot'
 
         steps:
+          - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
           - name: Checkout
             uses: actions/checkout@v2
             with:
