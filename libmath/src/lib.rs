@@ -10,6 +10,6 @@ pub fn sub(a: i32, b: i32) -> i32 {
 
 
 pub fn multiply(a: i32, b: i32) -> i32 {
-    println!("call subtraction function");
+    println!("call multiply function");
     return a * b;
 }
