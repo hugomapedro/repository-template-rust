@@ -8,15 +8,15 @@ body:
   - type: textarea
     id: fr-context
     attributes:
-      label: Feature request context
-      description: Describe if your feature request is related to some problem or issue
-      placeholder: A clear and concise description of what motivates you to create this feature request. 
+      label: Feature Request context & motivation
+      description: Describe the context and motivation for the creation of this feature request
+      placeholder: A clear and concise description of the context and motivations for the creation this Feature Request. 
     validations:
       required: true
   - type: textarea
     id: fr-description
     attributes:
-      label: Feature resquest description
+      label: Feature Resquest description
       description: Describe in detail your Feature Request
       placeholder: A clear and concise description of the Feature Request.
     validations:
