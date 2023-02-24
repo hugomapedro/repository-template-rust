@@ -1,0 +1,15 @@
+name: Project Sync
+on:
+  issues:
+    types: [opened, edited, milestoned]
+
+env:
+  RUST_BACKTRACE: 1
+
+jobs:
+    start:
+        name: Test
+        runs-on: ubuntu-latest
+        
+        steps:
+          - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
