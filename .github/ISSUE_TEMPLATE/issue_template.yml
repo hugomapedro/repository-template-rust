@@ -17,10 +17,7 @@ body:
     attributes:
       label: Steps to reproduce
       description: Describe Steps to reproduce the behavior
-      placeholder: |+ 1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+      placeholder: 1. Go to '...'
     validations:
       required: true
   - type: textarea
