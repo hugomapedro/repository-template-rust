@@ -1,0 +1,46 @@
+name: Feature Request
+description: Submit new feature request 
+title: "[FEAT]: "
+labels: ["feature"]
+assignees:
+  - hmapedro
+body:
+  - type: textarea
+    id: fr-context
+    attributes:
+      label: Feature request context
+      description: Describe if your feature request is related to some problem or issue
+      placeholder: A clear and concise description of what motivates you to create this feature request. 
+    validations:
+      required: true
+  - type: textarea
+    id: fr-description
+    attributes:
+      label: Feature resquest description
+      description: Describe in detail your Feature Request
+      placeholder: A clear and concise description of the Feature Request.
+    validations:
+      required: true
+  - type: textarea
+    id: fr-alternatives
+    attributes:
+      label: Feature Request Alternatives
+      description: Describe the alternatives you considered
+      placeholder: A clear and concise description of any alternative solutions or features you've considered.
+    validations:
+      required: false
+  - type: textarea
+    id: fr-additionalinfo
+    attributes:
+      label: Additional Information
+      description: Provide additional information you considered relevant for this Feature Request
+    validations:
+      required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this Feature Request, you agree to follow our [Code of Conduct](https://example.com)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
