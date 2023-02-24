@@ -3,20 +3,18 @@ on:
   issues:
     types: [opened, edited, milestoned]
 
+name: Add PR to project
+on:
+  pull_request:
+    types:
+      - ready_for_review
 jobs:
   track_pr:
     runs-on: ubuntu-latest
     steps:
-      - name: Generate token
-        id: generate_token
-        uses: tibdex/github-app-token@36464acb844fc53b9b8b2401da68844f6b05ebb0
-        with:
-          app_id: ${{ secrets.APP_ID }}
-          private_key: ${{ secrets.APP_PEM }}
-
       - name: Get project data
         env:
-          GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
           ORGANIZATION: hmapedro
           PROJECT_NUMBER: 1
         run: |
@@ -50,10 +48,10 @@ jobs:
           echo 'STATUS_FIELD_ID='$(jq '.data.organization.projectV2.fields.nodes[] | select(.name== "Status") | .id' project_data.json) >> $GITHUB_ENV
           echo 'TODO_OPTION_ID='$(jq '.data.organization.projectV2.fields.nodes[] | select(.name== "Status") | .options[] | select(.name=="Todo") |.id' project_data.json) >> $GITHUB_ENV
 
-      - name: Add Issue to project
+      - name: Add PR to project
         env:
-          GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
-          ISSUE_ID: ${{ github.event.issue.node_id }}
+          GITHUB_TOKEN: ${{ secrets.YOUR_TOKEN }}
+          PR_ID: ${{ github.event.pull_request.node_id }}
         run: |
           item_id="$( gh api graphql -f query='
             mutation($project:ID!, $pr:ID!) {
@@ -71,7 +69,7 @@ jobs:
 
       - name: Set fields
         env:
-          GITHUB_TOKEN: ${{ steps.generate_token.outputs.token }}
+          GITHUB_TOKEN: ${{ secrets.YOUR_TOKEN }}
         run: |
           gh api graphql -f query='
             mutation (
