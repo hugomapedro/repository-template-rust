@@ -18,11 +18,3 @@ jobs:
           github-token: ${{ secrets.TOKEN }}
           labeled: bug, needs-triage
           label-operator: OR
-  send-message-mattermost:
-      name: Create the Mattermost Message
-      runs-on: ubuntu-latest
-      steps:
-        - run: echo "{\"text\":\"testing github action :tada:\"}" > mattermost.json
-        - uses: mattermost/action-mattermost-notify@master
-          env:
-            MATTERMOST_WEBHOOK_URL: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
