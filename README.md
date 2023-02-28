@@ -1,6 +1,6 @@
 # repository-template
 
-Repo Tag Line (1 line) Repo
+Repo Tag Line (1 line) Repo Repo
 
 Repo Brief Description (2 to 5 lines)
 
