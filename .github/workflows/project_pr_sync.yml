@@ -16,5 +16,5 @@ jobs:
           # to the issue
           project-url: https://github.com/users/hmapedro/projects/1
           github-token: ${{ secrets.TOKEN }}
-          labeled: pr, needs-triage
-          label-operator: OR
+          #labeled: pr, needs-triage
+          #label-operator: OR
