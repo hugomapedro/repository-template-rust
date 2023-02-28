@@ -1,4 +1,4 @@
-name: Add Pull Requests to scrum board project
+name: Add bugs to scrum board project
 
 on:
   pull_request:
@@ -7,10 +7,14 @@ on:
 
 jobs:
   add-to-project:
-    name: Add PR to project
+    name: Add pull request to project
     runs-on: ubuntu-latest
     steps:
       - uses: actions/add-to-project@v0.4.0
         with:
+          # You can target a repository in a different organization
+          # to the issue
           project-url: https://github.com/users/hmapedro/projects/1
           github-token: ${{ secrets.TOKEN }}
+          #labeled: bug, feature
+          #label-operator: OR
